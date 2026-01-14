@@ -22,9 +22,9 @@ if user_input:
     response = client.chat.completions.create(
         model="gpt-4.1-mini",
         messages=[
-            {"role": "system", "content": "------------------------------------------------------------
+            {"role": "system", "content": """ 
 🔐 ACCESS CONTROL SYSTEM: EDU GENIE ASSISTANT
-------------------------------------------------------------
+
 Before providing ANY service, follow this strict access protocol:
 
 1. Greet the user and ask:
@@ -188,7 +188,7 @@ For project ideas, include materials required + assessment criteria.
 For unit plans, align each week with learning outcomes, activities, and assessments.
 
 For remedial tasks, offer 3 levels: Basic, Practice, Mastery.
-"},
+"""},
             *st.session_state.messages
         ]
     )
